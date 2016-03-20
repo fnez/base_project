@@ -1,0 +1,42 @@
+body {
+  background-color: lightgray;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 1.4em;
+}
+.container h1 {
+  text-transform: uppercase;
+  text-align: center;
+  color: lightgreen;
+}
+
+.col {
+  
+  margin: 0 auto;
+}
+.col p {
+  width: 80%;
+}
+
+.col h1, .col h2 {
+  text-transform: capitalize;
+  color: tomato;
+}
+
+nav li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px;
+  margin: 35px 0;
+}
+
+nav li a {
+  text-decoration: none;
+  text-transform: capitalize;
+  background-color: gray;
+  color: white;
+  padding: 15px;
+}
