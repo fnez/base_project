@@ -1,5 +1,6 @@
 body {
   background-color: lightgray;
+  font-family: Helvetica, arial, sans-serif;
 }
 .container {
   width: 80%;
@@ -8,17 +9,16 @@ body {
   padding: 1.4em;
 }
 .container h1 {
+  padding-bottom: 8px;
+}
+.container h1, nav h3 {
   text-transform: uppercase;
   text-align: center;
   color: lightgreen;
+  border-bottom: 1px dotted lightgreen;
 }
-
 .col {
-  
   margin: 0 auto;
-}
-.col p {
-  width: 80%;
 }
 
 .col h1, .col h2 {
@@ -26,11 +26,38 @@ body {
   color: tomato;
 }
 
+.col p {
+  width: 80%;
+  line-height: 2;
+  letter-spacing: .1em;
+}
+.image-container {
+  border: 1px solid gray;
+  position: relative;
+}
+.portland-img {
+  width: 50%;
+  position: relative;
+}
+.image-info {
+  position: absolute;
+  color: white;
+  background-color: tomato;
+  padding: 10px;
+  width: 50%;
+}
+nav {
+  position: relative;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+}
 nav li {
   list-style: none;
   display: inline-block;
   padding: 10px;
-  margin: 35px 0;
+  margin: 5% 0;
 }
 
 nav li a {
@@ -39,4 +66,54 @@ nav li a {
   background-color: gray;
   color: white;
   padding: 15px;
+}
+
+nav h3 {
+  padding: 20px;
+  color: orange;
+}
+
+clearfix::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+/************ MEDIA QUERIES ************/
+
+@media  (min-width: 769px) {
+  .container {
+    position: relative;
+  }
+  .col {
+    display: inline-block;
+  }
+  .secondary {
+    float: right;
+  }
+  .portland-img {
+    width: 30%;
+    float: left;
+    padding: 20px;
+  }
+  .secondary p {
+    position: absolute;
+    padding: 20px;
+    top: 33%;
+    left: 35%;
+    width: 50%;
+  }
+}
+
+@media (min width: 1025px) {
+  .container {
+    position: relative;
+  }
+  .portland-img {
+    width: 15%;
+  }
+  .secondary p {
+    position: absolute;
+    top: 30%;
+  }
 }
